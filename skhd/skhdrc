@@ -2,10 +2,14 @@
 :: default : borders active_color=0xe5be56db inactive_color=0xa5524054
 
 lalt - space ; aerospace
+
 aerospace < space ; default
 aerospace < alt - space ; default
 
+
 aerospace < cmd - w : aerospace close
+
+
 aerospace < return -> : :
 aerospace < cmd - tab -> : :
 aerospace < cmd - q -> : :
@@ -15,31 +19,16 @@ aerospace < cmd - space -> ; default
 aerospace < cmd + alt + shift - escape -> ; default
 
 
+###### Focus ######
+
+# Focus Window
+
 aerospace < h : aerospace focus left
 aerospace < j : aerospace focus down
 aerospace < k : aerospace focus up
 aerospace < l : aerospace focus right
 
-aerospace < 0x21 : aerospace focus-monitor --wrap-around prev
-aerospace < 0x1E : aerospace focus-monitor --wrap-around next
-
-aerospace < shift - h : aerospace move left
-aerospace < shift - j : aerospace move down
-aerospace < shift - k : aerospace move up
-aerospace < shift - l : aerospace move right
-
-aerospace < shift - 0x21 : aerospace move-node-to-monitor --wrap-around prev && aerospace focus-monitor --wrap-around prev
-aerospace < shift - 0x1E : aerospace move-node-to-monitor --wrap-around next && aerospace focus-monitor --wrap-around next
-
-aerospace < alt - h : aerospace join-with left
-aerospace < alt - j : aerospace join-with down
-aerospace < alt - k : aerospace join-with up
-aerospace < alt - l : aerospace join-with right
-
-aerospace < lalt + shift - h : aerospace resize width -10
-aerospace < lalt + shift - l : aerospace resize width +10
-aerospace < lalt + shift - j : aerospace resize height +10
-aerospace < lalt + shift - k : aerospace resize height -10
+# Focus Workspace
 
 aerospace < 0x29 : aerospace workspace --wrap-around prev
 aerospace < 0x27 : aerospace workspace --wrap-around next
@@ -77,6 +66,24 @@ aerospace < b : aerospace workspace b
 aerospace < n : aerospace workspace n
 aerospace < m : aerospace workspace m
 
+# Focus Monitor
+
+aerospace < 0x21 : aerospace focus-monitor --wrap-around prev
+aerospace < 0x1E : aerospace focus-monitor --wrap-around next
+
+
+
+###### Move ######
+
+# Move in Workspace
+
+aerospace < shift - h : aerospace move left
+aerospace < shift - j : aerospace move down
+aerospace < shift - k : aerospace move up
+aerospace < shift - l : aerospace move right
+
+# Move to Workspace
+
 aerospace < shift - 0x29 : aerospace move-node-to-workspace --wrap-around prev; aerospace workspace --wrap-around prev
 aerospace < shift - 0x27 : aerospace move-node-to-workspace --wrap-around next; aerospace workspace --wrap-around next
 
@@ -113,5 +120,33 @@ aerospace < shift - b : aerospace move-node-to-workspace b; aerospace workspace 
 aerospace < shift - n : aerospace move-node-to-workspace n; aerospace workspace n
 aerospace < shift - m : aerospace move-node-to-workspace m; aerospace workspace m
 
+# Move to Monitor
+
+aerospace < shift - 0x21 : aerospace move-node-to-monitor --wrap-around prev && aerospace focus-monitor --wrap-around prev
+aerospace < shift - 0x1E : aerospace move-node-to-monitor --wrap-around next && aerospace focus-monitor --wrap-around next
+
+
+
+###### Layout ######
+
+# Join Window
+
+aerospace < alt - h : aerospace join-with left
+aerospace < alt - j : aerospace join-with down
+aerospace < alt - k : aerospace join-with up
+aerospace < alt - l : aerospace join-with right
+
+# Resize Window
+
+aerospace < lalt + shift - h : aerospace resize width -10
+aerospace < lalt + shift - l : aerospace resize width +10
+aerospace < lalt + shift - j : aerospace resize height +10
+aerospace < lalt + shift - k : aerospace resize height -10
+
+# Float Window
+
 aerospace < 0x2C : aerospace layout floating || aerospace layout tiling
+
+# Change Layout
+
 aerospace < 0x2A : aerospace layout tiles || aerospace layout accordion
