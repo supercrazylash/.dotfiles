@@ -1,0 +1,117 @@
+:: aerospace @ : borders active_color=0xef71db56 inactive_color=0xa5405442
+:: default : borders active_color=0xe5be56db inactive_color=0xa5524054
+
+lalt - space ; aerospace
+aerospace < space ; default
+aerospace < alt - space ; default
+
+aerospace < cmd - w : aerospace close
+aerospace < return -> : :
+aerospace < cmd - tab -> : :
+aerospace < cmd - q -> : :
+aerospace < cmd - n -> : :
+aerospace < ctrl + alt - k -> : :
+aerospace < cmd - space -> ; default
+aerospace < cmd + alt + shift - escape -> ; default
+
+
+aerospace < h : aerospace focus left
+aerospace < j : aerospace focus down
+aerospace < k : aerospace focus up
+aerospace < l : aerospace focus right
+
+aerospace < 0x21 : aerospace focus-monitor --wrap-around prev
+aerospace < 0x1E : aerospace focus-monitor --wrap-around next
+
+aerospace < shift - h : aerospace move left
+aerospace < shift - j : aerospace move down
+aerospace < shift - k : aerospace move up
+aerospace < shift - l : aerospace move right
+
+aerospace < shift - 0x21 : aerospace move-node-to-monitor --wrap-around prev && aerospace focus-monitor --wrap-around prev
+aerospace < shift - 0x1E : aerospace move-node-to-monitor --wrap-around next && aerospace focus-monitor --wrap-around next
+
+aerospace < alt - h : aerospace join-with left
+aerospace < alt - j : aerospace join-with down
+aerospace < alt - k : aerospace join-with up
+aerospace < alt - l : aerospace join-with right
+
+aerospace < lalt + shift - h : aerospace resize width -10
+aerospace < lalt + shift - l : aerospace resize width +10
+aerospace < lalt + shift - j : aerospace resize height +10
+aerospace < lalt + shift - k : aerospace resize height -10
+
+aerospace < 0x29 : aerospace workspace --wrap-around prev
+aerospace < 0x27 : aerospace workspace --wrap-around next
+
+aerospace < 1 : aerospace workspace 1
+aerospace < 2 : aerospace workspace 2
+aerospace < 3 : aerospace workspace 3
+aerospace < 4 : aerospace workspace 4
+aerospace < 5 : aerospace workspace 5
+aerospace < 6 : aerospace workspace 6
+aerospace < 7 : aerospace workspace 7
+aerospace < 8 : aerospace workspace 8
+aerospace < 9 : aerospace workspace 9
+aerospace < 0 : aerospace workspace 10
+aerospace < q : aerospace workspace q
+aerospace < w : aerospace workspace w
+aerospace < e : aerospace workspace e
+aerospace < r : aerospace workspace r
+aerospace < t : aerospace workspace t
+aerospace < y : aerospace workspace y
+aerospace < u : aerospace workspace u
+aerospace < i : aerospace workspace i
+aerospace < o : aerospace workspace o
+aerospace < p : aerospace workspace p
+aerospace < a : aerospace workspace a
+aerospace < s : aerospace workspace s
+aerospace < d : aerospace workspace d
+aerospace < f : aerospace workspace f
+aerospace < g : aerospace workspace g
+aerospace < z : aerospace workspace z
+aerospace < x : aerospace workspace x
+aerospace < c : aerospace workspace c
+aerospace < v : aerospace workspace v
+aerospace < b : aerospace workspace b
+aerospace < n : aerospace workspace n
+aerospace < m : aerospace workspace m
+
+aerospace < shift - 0x29 : aerospace move-node-to-workspace --wrap-around prev; aerospace workspace --wrap-around prev
+aerospace < shift - 0x27 : aerospace move-node-to-workspace --wrap-around next; aerospace workspace --wrap-around next
+
+aerospace < shift - 1 : aerospace move-node-to-workspace 1; aerospace workspace 1
+aerospace < shift - 2 : aerospace move-node-to-workspace 2; aerospace workspace 2
+aerospace < shift - 3 : aerospace move-node-to-workspace 3; aerospace workspace 3
+aerospace < shift - 4 : aerospace move-node-to-workspace 4; aerospace workspace 4
+aerospace < shift - 5 : aerospace move-node-to-workspace 5; aerospace workspace 5
+aerospace < shift - 6 : aerospace move-node-to-workspace 6; aerospace workspace 6
+aerospace < shift - 7 : aerospace move-node-to-workspace 7; aerospace workspace 7
+aerospace < shift - 8 : aerospace move-node-to-workspace 8; aerospace workspace 8
+aerospace < shift - 9 : aerospace move-node-to-workspace 9; aerospace workspace 9
+aerospace < shift - 0 : aerospace move-node-to-workspace 10; aerospace workspace 10
+aerospace < shift - q : aerospace move-node-to-workspace q; aerospace workspace q
+aerospace < shift - w : aerospace move-node-to-workspace w; aerospace workspace w
+aerospace < shift - e : aerospace move-node-to-workspace e; aerospace workspace e
+aerospace < shift - r : aerospace move-node-to-workspace r; aerospace workspace r
+aerospace < shift - t : aerospace move-node-to-workspace t; aerospace workspace t
+aerospace < shift - y : aerospace move-node-to-workspace y; aerospace workspace y
+aerospace < shift - u : aerospace move-node-to-workspace u; aerospace workspace u
+aerospace < shift - i : aerospace move-node-to-workspace i; aerospace workspace i
+aerospace < shift - o : aerospace move-node-to-workspace o; aerospace workspace o
+aerospace < shift - p : aerospace move-node-to-workspace p; aerospace workspace p
+aerospace < shift - a : aerospace move-node-to-workspace a; aerospace workspace a
+aerospace < shift - s : aerospace move-node-to-workspace s; aerospace workspace s
+aerospace < shift - d : aerospace move-node-to-workspace d; aerospace workspace d
+aerospace < shift - f : aerospace move-node-to-workspace f; aerospace workspace f
+aerospace < shift - g : aerospace move-node-to-workspace g; aerospace workspace g
+aerospace < shift - z : aerospace move-node-to-workspace z; aerospace workspace z
+aerospace < shift - x : aerospace move-node-to-workspace x; aerospace workspace x
+aerospace < shift - c : aerospace move-node-to-workspace c; aerospace workspace c
+aerospace < shift - v : aerospace move-node-to-workspace v; aerospace workspace v
+aerospace < shift - b : aerospace move-node-to-workspace b; aerospace workspace b
+aerospace < shift - n : aerospace move-node-to-workspace n; aerospace workspace n
+aerospace < shift - m : aerospace move-node-to-workspace m; aerospace workspace m
+
+aerospace < 0x2C : aerospace layout floating || aerospace layout tiling
+aerospace < 0x2A : aerospace layout tiles || aerospace layout accordion
