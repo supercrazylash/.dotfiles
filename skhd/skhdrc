@@ -1,5 +1,5 @@
-:: aerospace @ : borders active_color=0xef71db56 inactive_color=0xa5405442
-:: default : borders active_color=0xe5be56db inactive_color=0xa5524054
+:: aerospace @ : borders active_color=0xef71db56 inactive_color=0xa5405442 && echo 1 > /tmp/swiftbar/aerospace/mode
+:: default : borders active_color=0xe5be56db inactive_color=0xa5524054 && echo 0 > /tmp/swiftbar/aerospace/mode
 
 lalt - space ; aerospace
 
