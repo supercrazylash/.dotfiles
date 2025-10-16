@@ -20,6 +20,7 @@ aerospace < ctrl + alt - k -> : :
 aerospace < cmd - space -> ; default
 
 # passthrough force quit manager while exiting aerospace for panic situations
+aerospace < cmd + alt - escape -> ; default
 aerospace < cmd + alt + shift - escape -> ; default
 
 
