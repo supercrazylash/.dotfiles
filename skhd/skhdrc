@@ -6,16 +6,20 @@ lalt - space ; aerospace
 aerospace < space ; default
 aerospace < alt - space ; default
 
-
+# close windows from aerospace mode with cmd - w
 aerospace < cmd - w : aerospace close
 
-
+# passthrough commands useful for window management
 aerospace < return -> : :
 aerospace < cmd - tab -> : :
 aerospace < cmd - q -> : :
 aerospace < cmd - n -> : :
 aerospace < ctrl + alt - k -> : :
+
+# passthrough spotlight while exiting aerospace to permit typing
 aerospace < cmd - space -> ; default
+
+# passthrough force quit manager while exiting aerospace for panic situations
 aerospace < cmd + alt + shift - escape -> ; default
 
 
