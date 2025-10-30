@@ -1,6 +1,12 @@
 :: aerospace @ : borders active_color=0xef71db56 inactive_color=0xa5405442 && echo 1 > /tmp/swiftbar/aerospace/mode
 :: default : borders active_color=0xe5be56db inactive_color=0xa5524054 && echo 0 > /tmp/swiftbar/aerospace/mode
 
+# reload borders
+lalt + shift - r : bash -c "killall borders; $HOME/.config/borders/bordersrc"
+
+# Open new terminal
+lalt + shift - t : osascript -e 'tell application "iTerm" to create window with default profile'
+
 lalt - space ; aerospace
 
 aerospace < space ; default
