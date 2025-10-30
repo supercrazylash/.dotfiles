@@ -4,7 +4,7 @@
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-    'exec-and-forget /Users/LASH/.config/borders/bordersrc',
+    'exec-and-forget $HOME/.config/borders/bordersrc',
     'exec-and-forget ps aux | grep -v grep | grep -c -i AutoRaise || /usr/local/bin/AutoRaise'
 ]
 
